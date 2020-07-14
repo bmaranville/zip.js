@@ -46,4 +46,4 @@
 	var env = global.zip || global;
 	env.Deflater = env._zlib_asm_Deflater = Deflater;
 	env.Inflater = env._zlib_asm_Inflater = Inflater;
-})(this);
+})(globalThis);

@@ -2057,4 +2057,4 @@
 	// 'zip' may not be defined in z-worker and some tests
 	var env = global.zip || global;
 	env.Deflater = env._jzlib_Deflater = Deflater;
-})(this);
+})(globalThis);

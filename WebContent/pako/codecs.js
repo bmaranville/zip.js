@@ -61,4 +61,4 @@
 	var env = global.zip || global;
 	env.Deflater = env._pako_Deflater = Deflater;
 	env.Inflater = env._pako_Inflater = Inflater;
-})(this);
+})(globalThis);

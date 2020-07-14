@@ -150,4 +150,4 @@
 		return bytes;
 	};
 	NOOP.prototype.flush = function flush() {};
-})(this);
+})(globalThis);

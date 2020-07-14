@@ -209,4 +209,4 @@
     function fail(msg) {
         throw new Error(msg);
     }
-}(this)); 
+}(globalThis)); 
