@@ -1,0 +1,24 @@
+{
+  "name": "zip.js",
+  "version": "0.0.2",
+  "description": "zip.js is an open-source library (BSD license) for zipping and unzipping files.",
+  "main": "WebContent/zip.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmaranville/zip.js.git"
+  },
+  "keywords": [
+    "esm",
+    "zip",
+    "javascript"
+  ],
+  "author": "Gildas Lormeau",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "bugs": {
+    "url": "https://github.com/bmaranville/zip.js/issues"
+  },
+  "homepage": "https://github.com/bmaranville/zip.js#readme"
+}
