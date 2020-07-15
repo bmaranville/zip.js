@@ -541,12 +541,17 @@ FS.prototype = {
     }
 };
 
-zip.fs = {
+export const fs = {
     FS: FS,
     ZipDirectoryEntry: ZipDirectoryEntry,
     ZipFileEntry: ZipFileEntry
 };
 
-zip.getMimeType = function () {
+function getMimeType() {
     return "application/octet-stream";
 };
+
+export function install() {
+    zip.fs = fs;
+    zip.getMimeType = getMimeType;
+}

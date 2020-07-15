@@ -2,7 +2,8 @@
   "name": "zip.js",
   "version": "0.0.2",
   "description": "zip.js is an open-source library (BSD license) for zipping and unzipping files.",
-  "main": "WebContent/zip.js",
+  "main": "WebContent/index.js",
+  "module": "WebContent/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

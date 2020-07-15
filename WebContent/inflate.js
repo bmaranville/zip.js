@@ -2152,4 +2152,6 @@ function Inflater() {
 
 export default Inflater;
 
-zip.Inflater = Inflater;
+export function install() {
+    zip.Inflater = Inflater;
+}

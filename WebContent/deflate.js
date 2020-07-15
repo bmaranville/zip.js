@@ -2057,4 +2057,6 @@ function Deflater(options) {
 
 export default Deflater;
 
-zip.Deflater = Deflater;
+export function install() {
+	zip.Deflater = Deflater;
+}

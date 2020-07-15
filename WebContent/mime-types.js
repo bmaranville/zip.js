@@ -1003,4 +1003,6 @@ var getMimeType = function (filename) {
 
 export default getMimeType;
 
-zip.getMimeType = getMimeType;
+export function install() {
+	zip.getMimeType = getMimeType;
+}
