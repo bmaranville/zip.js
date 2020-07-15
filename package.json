@@ -1,6 +1,6 @@
 {
   "name": "zip.js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "zip.js is an open-source library (BSD license) for zipping and unzipping files.",
   "main": "WebContent/index.js",
   "module": "WebContent/index.js",
