@@ -1,3 +1,5 @@
+const requestFileSystem = globalThis.webkitRequestFileSystem || globalThis.mozRequestFileSystem || globalThis.requestFileSystem;
+
 function createTempFile(callback) {
 	var TMP_FILENAME = "file.tmp";
 	requestFileSystem(TEMPORARY, 4 * 1024 * 1024 * 1024, function(filesystem) {
@@ -14,3 +16,5 @@ function createTempFile(callback) {
 		}, create);
 	});
 }
+
+export default createTempFile;

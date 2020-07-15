@@ -1,6 +1,7 @@
 // configure all test cases.
+import zip from '../zip.js';
 
-zip.useWebWorkers = true;
+zip.useWebWorkers = false;
 
 // to test third party deflate implementations, comment out 'zip.workerScriptsPath =...' and uncomment 'zip.workerScripts = ...'
 zip.workerScriptsPath = '../';
