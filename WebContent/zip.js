@@ -27,8 +27,6 @@
  */
 
 "use strict";
-import Inflater from './inflate.js';
-import Deflater from './defalte.js';
 
 const obj = globalThis;
 var zip;
@@ -463,7 +461,7 @@ function inflate(worker, sn, reader, writer, offset, size, computeCrc32, onend, 
         };
         launchWorkerProcess(worker, initialMessage, reader, writer, offset, size, onprogress, onend, onreaderror, onwriteerror);
     } else
-        launchProcess(new Inflater(), reader, writer, offset, size, crcType, onprogress, onend, onreaderror, onwriteerror);
+        launchProcess(new zip.Inflater(), reader, writer, offset, size, crcType, onprogress, onend, onreaderror, onwriteerror);
 }
 
 function deflate(worker, sn, reader, writer, level, onend, onprogress, onreaderror, onwriteerror) {
@@ -477,7 +475,7 @@ function deflate(worker, sn, reader, writer, level, onend, onprogress, onreaderr
         };
         launchWorkerProcess(worker, initialMessage, reader, writer, 0, reader.size, onprogress, onend, onreaderror, onwriteerror);
     } else
-        launchProcess(new Deflater(), reader, writer, 0, reader.size, crcType, onprogress, onend, onreaderror, onwriteerror);
+        launchProcess(new zip.Deflater(), reader, writer, 0, reader.size, crcType, onprogress, onend, onreaderror, onwriteerror);
 }
 
 function copy(worker, sn, reader, writer, offset, size, computeCrc32, onend, onprogress, onreaderror, onwriteerror) {
@@ -880,7 +878,7 @@ var DEFAULT_WORKER_SCRIPTS = {
 function createWorker(type, callback, onerror) {
     // not yet implemented in ES6 module form - webworkers can't load modules directly 
     // in most browsers.
-    raise "Not Implemented";
+    throw "Not Implemented";
 
     if (zip.workerScripts !== null && zip.workerScriptsPath !== null) {
         onerror(new Error('Either zip.workerScripts or zip.workerScriptsPath may be set, not both.'));
